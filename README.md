@@ -94,6 +94,14 @@ per_school_summary_df.loc[["Thomas High School"],['% Overall Passing']]= per_ths
 
 ### Results Overview
 
+* District Summary
+
+![goals](district_summary.PNG)
+
+* School Summary
+
+![goals](school_summary.PNG)
+
 * Spending Grade Average
 
 ![goals](spending_grade_average.PNG)
