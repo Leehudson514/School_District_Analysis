@@ -4,10 +4,14 @@
 * The purpose of this analysis was to create an overview of the school district that would focus on "math & reading test grades", "students grade levels", "dollar spending per school" and "student populations size" to help with future planning and budget allocations.
 
 ## Results
+### Data Cleaning & Refactoring
 * Before the analysis could begin, the data provided needed to be cleaned.
     * Some Students had pre fixes in their  names that needed to be removed. (Such as Ex. "Dr.")
-    * Photo
-    * This data was cleaned with the following code
+    
+![goals](dr_prefix.PNG)
+
+* Data cleaned using following method:
+
 ```
 # Add each prefix and suffix to remove to a list.
 prefixes_suffixes = ["Dr.", "Mr.", "Ms.", "Mrs.", "Miss", "MD", "DDS", "DVM", "Phd" ]
@@ -16,14 +20,16 @@ prefixes_suffixes = ["Dr.", "Mr.", "Ms.", "Mrs.", "Miss", "MD", "DDS", "DVM", "P
 for word in prefixes_suffixes:
     student_data_df["student_name"] = student_data_df["student_name"].str.replace(word,"")
 ```
-* Result:
-![goals](Removed_prefix.png)
+
+![goals](Removed_prefix.PNG)
 
 * Additionally,  Thomas High School was providing incomplete data specifically with their 9th graders and was removed to provide accurate results.
     * Without cleaning this data, Thomas High School was displaying much lower performance.
-* Before data was cleaned
-photo
-* The corrupted 9th graders data was cleaned using the follwoing method:
+* Before data was cleaned:
+
+![goals](ths_9th_graders.PNG)
+
+* The corrupted 9th graders data was cleaned using the following method:
 
 ```
 # Get the number of 10th-12th graders from Thomas High School (THS).
@@ -83,18 +89,31 @@ per_school_summary_df.loc[["Thomas High School"],['% Passing Reading']]= per_ths
 # Replace the overall passing percentage for Thomas High School in the per_school_summary_df.
 per_school_summary_df.loc[["Thomas High School"],['% Overall Passing']]= per_ths_reading_math
 ```
-photo
+
+![goals](ths_correct_results.PNG)
+
+### Results Overview
 
 * Spending Grade Average
-photo
+
+![goals](spending_grade_average.PNG)
+
 * Scores by School Size
-Photo
+
+![goals](scores_school_size.PNG)
+
 * Scores by School Type
-photo
+
+![goals](scores_school_type.PNG)
+
 * Top Five Schools
-photo
+
+![goals](top_five.PNG)
+
 * Bottom Five Schools
-photo
+
+![goals](bottom_five.PNG)
+
 ## Summary
 * Statement summarizing four changes to the school district analysis afer reading and math score were replaced
 
