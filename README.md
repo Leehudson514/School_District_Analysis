@@ -17,7 +17,7 @@ for word in prefixes_suffixes:
     student_data_df["student_name"] = student_data_df["student_name"].str.replace(word,"")
 ```
 * Result:
-Photo
+![goals](Removed_prefix.png)
 
 * Additionally,  Thomas High School was providing incomplete data specifically with their 9th graders and was removed to provide accurate results.
     * Without cleaning this data, Thomas High School was displaying much lower performance.
