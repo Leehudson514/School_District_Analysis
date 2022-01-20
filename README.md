@@ -92,6 +92,16 @@ per_school_summary_df.loc[["Thomas High School"],['% Overall Passing']]= per_ths
 
 ![goals](ths_correct_results.PNG)
 
+* Data cleaning Results:
+    * The District summary was impacted with regards to the total number of students being measured to have my accurate representation on what the analysis was focusing on.
+    * The School summary was affected by having the correct total number of students that were being measured to have accurate results.
+    * Thomas High School was postively impacted with their overall results increasing.
+          * Math and reading scores by grade increased.
+          * Scores by school spending were more accurate result of a smaller student population.
+          * Scores by school size allowed for schools to be properly classified because of an accurate student population.
+          * Score by school type was affected by the scores itself being more accurate resulting in accurate results for types.
+
+
 ### Results Overview
 
 * District Summary
@@ -123,5 +133,8 @@ per_school_summary_df.loc[["Thomas High School"],['% Overall Passing']]= per_ths
 ![goals](bottom_five.PNG)
 
 ## Summary
-* Statement summarizing four changes to the school district analysis afer reading and math score were replaced
+* Changes made to name prefixes were removed to have accurate student names.
+* 9th graders from Thomas High School were negatively impacting the analysis and were removed.
+    * This had an impact on total student size and increased the % grade for the high school.
+* Additionally, the use of '.loc' was added which helped narrow the focus on Thomas High School to determine the correct results.  
 
